@@ -1,20 +1,23 @@
 const levels = [
   { name: 'Fácil', pairs: 6 },
   { name: 'Médio', pairs: 8 },
-  { name: 'Difícil', pairs: 10 }
+  { name: 'Difícil', pairs: 10 },
+  { name: 'Extreme', pairs: 12 }
 ];
 
 const cardsArray = [
-  { name: 'Pele', img: './img/pele.jpg' },
-  { name: 'Zidane', img: './img/zidane.jpg' },
-  { name: 'Messi', img: './img/messi.jpg' },
-  { name: 'Neymar', img: './img/neymar.jpg' },
-  { name: 'Cristiano Ronaldo', img: './img/c_ronaldo.jpg' },
-  { name: 'Modric', img: './img/modric.jpg' },
-  { name: 'Mbappe', img: './img/mbappe.jpg' },
-  { name: 'Kaka', img: './img/kaka.jpg' },
-  { name: 'Maradona', img: './img/maradona.jpg' },
-  { name: 'Romario', img: './img/romario.jpg' }
+  { name: 'brtt', img: './img/brtt.jpg' },
+  { name: 'titan', img: './img/titan.png' },
+  { name: 'ceos', img: './img/ceos.jpg' },
+  { name: 'Tin', img: './img/tin.jpg' },
+  { name: 'route', img: './img/route.jpg' },
+  { name: 'Baiano', img: './img/baiano.jpg' },
+  { name: 'esa', img: './img/esa.jpg' },
+  { name: 'Dyn', img: './img/dyn.jpg' },
+  { name: 'ranger', img: './img/ranger.jpg' },
+  { name: 'Revolta', img: './img/revolta.jpg' },
+  { name: 'Follen', img: './img/follen.jpg' },
+  { name: 'Cold', img: './img/cold.jpg' }
 ];
 
 let gameBoard = document.getElementById('game-board');
@@ -81,7 +84,7 @@ function displayCards() {
       gameBoard.innerHTML += `
           <div class="card" data-name="${card.name}">
               <div class="card-inner">
-                  <div class="card-front">?</div>
+                  <div class="card-front"></div>
                   <div class="card-back">
                       <img src="${card.img}" alt="${card.name}">
                   </div>
@@ -147,7 +150,8 @@ function advanceLevel() {
       levelElement.textContent = currentLevel + 1;
       startGame();
   } else {
-      alert("Parabéns! Você completou todos os níveis.");
+      alert("Parabéns! Você completou todos os níveis. Tu é o campeão!");
+      
   }
 }
 
